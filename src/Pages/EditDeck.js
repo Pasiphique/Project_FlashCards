@@ -1,8 +1,9 @@
 
 import { readDeck,updateDeck} from "../utils/api"
-import { useParams,Link } from "react-router-dom"
+import { useParams,Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 export default function EditDeck(){
+    const navigate = useNavigate()
     const {deckId} = useParams()
     const formData ={
         name: '',
@@ -10,8 +11,10 @@ export default function EditDeck(){
        }
        const[form,setForm] = useState(formData)
        const[deck,setDeck] = useState({})
-    const handleSubmit = async () =>{
+    const handleSubmit = async (e) =>{
+        e.preventDefault()
         await updateDeck({id:deck.id,name:form.name, description:form.description}) 
+        navigate(`/decks/${deckId}`)
     }
     const handleInput = ({target}) =>{
         setForm({...form, [target.name]:target.value})

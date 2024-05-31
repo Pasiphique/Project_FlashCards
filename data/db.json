@@ -1,5 +1,11 @@
 {
-  "decks": [],
+  "decks": [
+    {
+      "id": 1,
+      "name": "updated again",
+      "description": "fdgf"
+    }
+  ],
   "cards": [
     {
       "id": 6,
@@ -115,6 +121,24 @@
       "id": 38,
       "front": "updated again and again",
       "back": "updated agagin and agin"
+    },
+    {
+      "id": 39,
+      "front": "updated side",
+      "back": "mewo",
+      "deckId": 1
+    },
+    {
+      "front": "vcbv",
+      "back": "vcbv",
+      "deckId": 1,
+      "id": 41
+    },
+    {
+      "front": "dsfds",
+      "back": "dsfdsf",
+      "deckId": 1,
+      "id": 42
     }
   ]
 }
